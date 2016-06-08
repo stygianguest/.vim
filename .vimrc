@@ -5,19 +5,24 @@
 execute pathogen#infect()
 let g:syntastic_always_populate_loc_list=1
 
-" don't enable syntastic by defualt
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" don't enable syntastic by default
+let g:syntastic_mode_map = {
+    \ 'mode': 'passive',
+    \ 'active_filetypes': ['ocaml'],
+    \ 'passive_filetypes': []
+    \ }
 
 " merlin
-":let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-":execute "set rtp+=" . g:opamshare . "/merlin/vim"
-":let g:syntastic_ocaml_checkers=['merlin']
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+let g:syntastic_ocaml_checkers=['merlin']
+
+" rootignore (respect gitignore files)
+let g:RootIgnoreAgignore = 0 " don't use ag (silversearcher) for indexing
 
 " ctrl-p
 let g:ctrlp_working_path_mode = 'war' " search from root directory with git (wr)
-
-" rootignore (respect gitignore files)
-let g:RootIgnoreAgignore = 0
+let g:ctrlp_by_filename = 1 " search by filename (as opposed to full path)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " general vim config
@@ -47,6 +52,7 @@ set sw=4 " tabs are only 4 spaces wide
 if has("wildmenu")
     set wildignore+=*.a,*.o,*.obj " ignore c-style object and lib files
     set wildignore+=*.cmi,*.cmo,*.cmx " ignore ocaml object files
+    set wildignore+=*.cmt,*.cmti " ignore ocaml type desc files
     set wildignore+=*.pyc " ignore python compiled files
     set wildmode=longest,list " bash-like filename completion
 endif
