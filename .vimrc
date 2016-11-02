@@ -87,6 +87,8 @@ set laststatus=2 " always display statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme delek
 
+set fillchars+=vert:│ " gapless split screen separator
+
 " based on delek
 let colors_name = "delek_blue"
 
@@ -117,7 +119,7 @@ hi SpecialKey ctermfg=DarkBlue	   guifg=Blue
 hi StatusLine cterm=bold	   ctermbg=blue ctermfg=yellow guibg=gold guifg=blue
 hi StatusLineNC	cterm=bold	   ctermbg=blue ctermfg=black  guibg=gold guifg=blue
 hi Title      ctermfg=DarkMagenta  gui=bold guifg=Magenta
-hi VertSplit  cterm=reverse	   gui=reverse
+hi VertSplit  cterm=None	   gui=None
 hi Visual     ctermbg=NONE	   cterm=reverse gui=reverse guifg=Grey guibg=fg
 hi VisualNOS  cterm=underline,bold gui=underline,bold
 hi WarningMsg ctermfg=DarkRed	   guifg=Red
