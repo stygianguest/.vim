@@ -24,6 +24,9 @@ let g:RootIgnoreAgignore = 0 " don't use ag (silversearcher) for indexing
 let g:ctrlp_working_path_mode = 'war' " search from root directory with git (wr)
 let g:ctrlp_by_filename = 1 " search by filename (as opposed to full path)
 
+" airline
+let g:airline_powerline_fonts = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " general vim config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
