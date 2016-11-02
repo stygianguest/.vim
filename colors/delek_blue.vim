@@ -23,16 +23,18 @@ hi NonText    ctermfg=Blue	   gui=bold guifg=gray guibg=white
 hi Pmenu      guibg=LightBlue
 hi PmenuSel   ctermfg=White	   ctermbg=DarkBlue  guifg=White  guibg=DarkBlue
 hi Question   ctermfg=DarkGreen    gui=bold guifg=SeaGreen
-hi Search     ctermfg=grey ctermbg=blue guibg=Yellow guifg=NONE
+hi Search     ctermfg=White ctermbg=blue guibg=Yellow guifg=NONE
 hi SpecialKey ctermfg=DarkBlue	   guifg=Blue
 hi StatusLine cterm=bold	   ctermbg=blue ctermfg=yellow guibg=gold guifg=blue
 hi StatusLineNC	cterm=bold	   ctermbg=blue ctermfg=black  guibg=gold guifg=blue
 hi Title      ctermfg=DarkMagenta  gui=bold guifg=Magenta
-hi VertSplit  cterm=reverse	   gui=reverse
+hi VertSplit  cterm=NONE	   gui=NONE
 hi Visual     ctermbg=NONE	   cterm=reverse gui=reverse guifg=Grey guibg=fg
 hi VisualNOS  cterm=underline,bold gui=underline,bold
 hi WarningMsg ctermfg=DarkRed	   guifg=Red
 hi WildMenu   ctermfg=grey ctermbg=blue guibg=Yellow guifg=Black
+
+hi ColorColumn ctermbg=NONE guibg=NONE " I dont' actually want to see the twcolumn
 
 " syntax highlighting
 hi Comment    cterm=NONE ctermfg=DarkRed     gui=NONE guifg=red2
