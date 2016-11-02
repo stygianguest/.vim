@@ -8,7 +8,7 @@ let g:syntastic_always_populate_loc_list=1
 " don't enable syntastic by default
 let g:syntastic_mode_map = {
     \ 'mode': 'passive',
-    \ 'active_filetypes': ['ocaml'],
+    \ 'active_filetypes': ['ocaml','llvm'],
     \ 'passive_filetypes': []
     \ }
 
