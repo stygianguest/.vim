@@ -88,9 +88,7 @@ set laststatus=2 " always display statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme delek
+set t_Co=256
+colorscheme delek_blue
 
 set fillchars+=vert:│ " gapless split screen separator
-
-" based on delek
-let colors_name = "delek_blue"
